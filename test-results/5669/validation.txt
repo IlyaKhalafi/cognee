@@ -1,0 +1,14 @@
+$ .venv/bin/python -m pytest cognee/tests/unit/tasks/ingestion cognee/tests/unit/tasks/test_data_item_to_text_file.py cognee/tests/unit/modules/ingestion/test_save_data_to_file_addressing.py cognee/tests/unit/modules/pipelines/test_incremental_passthrough_metadata.py cognee/tests/unit/api/test_incremental_refusals.py -q --disable-warnings --show-capture=no
+........................................................................ [ 28%]
+........................................................................ [ 57%]
+......................s................................................. [ 86%]
+......................s...........                                       [100%]
+248 passed, 2 skipped, 64 warnings in 36.04s
+
+$ .venv/bin/python -m pytest cognee/tests/integration/tasks/test_add_ingestion_regression.py -q --disable-warnings --show-capture=no
+...................                                                      [100%]
+19 passed, 16 warnings in 21.71s
+
+$ .venv/bin/python -m pytest cognee/tests/e2e/incremental_update/test_incremental_update.py -q --disable-warnings --show-capture=no
+..                                                                       [100%]
+2 passed, 668 warnings in 52.95s
